@@ -38,5 +38,28 @@ int main(int argc, char const *argv[])
         printf("\n");
     }
     
+    printf("-------------------------------------------------\nLa matriz transpuesta es:\n");
+
+    int matrix_t[m][n];
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            matrix_t[i][j]=matrix[j][i];
+        }
+        
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            printf("%d\t", matrix_t[i][j]);
+        }
+        printf("\n");
+    }
+
+
     return 0;
 }
