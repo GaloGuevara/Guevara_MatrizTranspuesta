@@ -4,17 +4,39 @@ El programa debe imprimir la matriz original y la matriz transpuesta.
 */
 #include <stdio.h>
 #include <time.h>
-#include <string.h>
+#include <stdlib.h>
 
 int main(int argc, char const *argv[])
 {
-    int n=0, m=0;
+    int n, m;
 
     printf("Ingrese el numero de filas de la matriz: ");
     scanf("%d%*c", &n);
     printf("Ingrese el numero de columnas de la matriz: ");
     scanf("%d%*c", &m);
 
-    printf("Se generará una matriz %dx%d\n", n,m);
+    printf("Se va a generar una matriz [%dx%d]:\n\n", n,m);
+
+    int matrix[n][m];
+    srand(time(NULL));
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            matrix[i][j]=rand()%100;
+        }
+        
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            printf("%d\t", matrix[i][j]);
+        }
+        printf("\n");
+    }
+    
     return 0;
 }
