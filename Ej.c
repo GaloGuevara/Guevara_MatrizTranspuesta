@@ -26,7 +26,7 @@ int main(int argc, char const *argv[])
     {
         for (int j = 0; j < m; j++)
         {
-            matrix[i][j] = rand() % 100; // Pendiente comprobar si genera hasta 100
+            matrix[i][j] = rand() % 101; // Pendiente comprobar si genera hasta 100
         }
     }
 
